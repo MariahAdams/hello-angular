@@ -15,8 +15,8 @@
   <ul ng-if="dirList.toggle">
     <li ng-repeat="item in dirList.list | filter:search"
         ng-class="item.age > 29 ? 'over-thirty' : 'under-thirty'"
-        ng-include="'person.html'"
-        >
+    >
+        <directory-person></directory-person>
     </li>
   </ul>
   <button ng-show="!dirList.toggle" ng-click="dirList.toggle = true">Show Names</button>
@@ -26,6 +26,5 @@
     <input type="number" placeholder="Age" ng-model="dirList.age">
     <input type="submit" value="Submit">
   </form>
-  <hello-world></hello-world>
 </body>
 </html>
